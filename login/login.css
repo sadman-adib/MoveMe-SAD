@@ -1,0 +1,91 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+      "Source Han Sans CN", sans-serif;
+}
+
+body img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -10;
+}
+
+.form-background{
+    padding: 50px;
+    margin: 180px 400px 20px 400px;
+    justify-items: center;
+    border: solid 2px;
+    border-color: white;
+    border-radius: 70px;
+    background-color: transparent;
+}
+
+.logo{
+    margin: -80px 0px;
+    font-size: 120px;
+    color: white;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+.login{
+    margin: -10px 0px 12px 0px;
+    font-size: 32px;
+    color: white;
+    font-family: 'Inknut Antiqua', serif;
+}
+  
+.form{
+    padding: 30px;
+    margin: 30px 220px 20px 220px;
+    background: rgba(255, 255, 255, 0.2);
+    justify-items: center;
+    border-radius: 30px; 
+    text-align: center;
+}
+
+.label{
+    font-size: 20px;
+    color: white;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+}
+
+.input{
+    width: 385px;
+    height: 50px;
+    border: solid 1px white;
+    border-radius: 22.32px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(46.87px);
+    -webkit-backdrop-filter: blur(46.87px);
+    padding: 0px 0px 0px 20px;
+    margin: 15px;
+}
+
+input::placeholder {
+    color: white;
+    font-size: 15px;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+}
+
+.btn{
+    width: 391px;
+    height: 32.8px;
+    border-radius: 10px;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.sub-text{
+    color: white;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}

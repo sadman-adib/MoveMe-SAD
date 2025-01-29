@@ -1,0 +1,116 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+      "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+      "Source Han Sans CN", sans-serif;
+}
+
+body{
+    background-color: #D9D9D9;
+}
+
+.main_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo{
+    margin-top: -110px;
+    margin-left: 70px;
+    font-size: 34px;
+    color: black;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+.back{
+    margin-left: -200px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.left-header-menu{
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Vertically align items */
+}
+
+.home{
+    margin-left: -80px;
+    font-size: 25px;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    margin-top: 40px;
+}
+
+.right-header-menu{
+    margin: 5px 10px 0px 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-bar{
+    margin: -20px 0px 0px -20px;
+    color: black;
+}
+
+td{ 
+    font-size: 14px;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    font-weight: 600;
+    padding: 20px 53px 20px 0px;
+}
+
+.side-bar{
+    display: flex;
+    margin-left: 32px;
+    padding: 30px;
+    padding-top: 0px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.banner{
+   margin-right: 10px;
+   margin-top: -30px;
+   height: 100%;
+   width: 100%;
+   background-color: white;
+   padding: 50px;
+   padding-bottom: 40px;
+   border-radius: 70px; 
+}
+
+.image-bg{
+    margin-top: -50px;
+    height: 77vh;
+    background: url('assets/unsplash_eDk6B7070Qc.png');
+    z-index: 24;
+    border-radius: 40px; /* Rounded corners */
+}
+
+.welcome-text{
+    color: white;
+    padding: 50px 0px 0px 50px;
+    font-size: 64px;
+    font-family: 'Calistoga', sans-serif;
+    font-weight: 100;
+}
+
+.p1{
+    color: white;
+    padding: 20px 0px 0px 50px;
+    font-size: 40px;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+}

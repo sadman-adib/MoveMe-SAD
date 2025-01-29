@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoveMe/Management/Bus</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arial+Rounded+MT+Bold:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="Maintanence.css" />
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="main_container">
+
+        <!-- Header Section -->
+        <div class="header">
+            <span class="left-header-menu">
+                <label class="logo">MoveMe</label>
+                <a href="previous-page.html">
+                    <img class="back" src="assets/Back.png" alt="Back">
+                </a>
+                <h1 class="home" style="cursor: pointer;">Emergency Maintanence</h1>
+            </span>
+
+            <table class="nav-bar">
+                <tr>
+                    <td onclick="selectOption(this, '/home/home.html')" style="cursor: pointer;">Home</td>
+                    <td onclick="selectOption(this, '/Bus-registration form/Bus-registration-form.html')" style="cursor: pointer;">Registration</td>
+                    <td onclick="selectOption(this, '/Bus-management-dashboard/Bus-management-dashboard.html')" style="cursor: pointer;">Management</td>
+                    <td onclick="selectOption(this, '')" style="cursor: pointer;">Real-Time Tracking</td>
+                    <td onclick="selectOption(this, '/Maintanence/Maintanence.html')" style="cursor: pointer;">Maintenance</td>
+                    <td onclick="selectOption(this, '/Revenue-dashboard/Revenue-dashboard.html')" style="cursor: pointer;">Revenue</td>
+                </tr>
+            </table>
+
+            <span class="right-header-menu">
+                <a href="search.html"><img src="assets/Search.png" alt="Search" style="cursor: pointer;"></a>
+                <a href="mail.html"><img src="assets/mail.png" alt="Mail" style="cursor: pointer;"></a>
+                <a href="notification.html"><img src="assets/notification.png" alt="Notification" style="cursor: pointer;"></a>
+                <a href="profile.html"><img src="assets/profile.png" alt="Profile" style="cursor: pointer;"></a>
+            </span>
+        </div>
+
+        <!-- Body Section -->
+        <div class="body">
+
+            <!-- Sidebar -->
+            <div class="side-bar">
+                <a href="/Move-Me-Frontend-main/Bus-registration form/Bus-registration-form.html">
+                    <img class="profile" src="assets/alert.png" alt="Alert" style="cursor: pointer;">
+                </a>
+                <a href="/Move-Me-Frontend-main/Store-registration form/Store-registration-form.html">
+                    <img class="profile" src="assets/painding.png" alt="Pending" style="cursor: pointer;">
+                </a>
+                <a href="bus-management.html">
+                    <img class="profile" src="assets/complete.png" alt="Complete" style="cursor: pointer;">
+                </a>
+                <a href="settings.html">
+                    <img class="settings" src="assets/settings.png" alt="Settings" style="cursor: pointer;">
+                </a>
+            </div>
+
+            <!-- Main Banner -->
+            <div class="banner">
+                <table class="driver-table">
+                    <thead>
+                        <tr>
+                            <th>Bus ID</th>
+                            <th>Driver ID</th>
+                            <th>Driver Name</th>
+                            <th>Phone</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                            <th>Assigned Mechanic</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="driver-table-body">
+                        <!-- Dynamic rows will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Modal for Assign Mechanic -->
+            <div id="assignMechanicModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>Assign Mechanic</h2>
+                    <form id="assignMechanicForm">
+                        <label for="mechanicName">Mechanic Name:</label>
+                        <input type="text" id="mechanicName" name="mechanicName" required />
+                        <input type="hidden" id="busId" name="busId" />
+                        <button type="button" onclick="submitAssignMechanic()">Assign</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include JavaScript -->
+    <script src="Maintanence.js"></script>
+</body>
+</html>

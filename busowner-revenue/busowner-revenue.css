@@ -1,0 +1,358 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+        Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", 
+        "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif;
+}
+
+/* General Styles */
+body {
+    background-color: #D9D9D9;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Layout Containers */
+.main_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    justify-items: center;
+    align-content: center;
+}
+
+/* Header Styles */
+.logo {
+    margin-top: -110px;
+    margin-left: 70px;
+    font-size: 34px;
+    color: black;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+.back {
+    margin-left: -200px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.left-header-menu {
+    display: flex;
+    align-items: center;
+}
+
+.home {
+    margin-left: -80px;
+    font-size: 25px;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    margin-top: 40px;
+}
+
+.right-header-menu {
+    margin: 5px 10px 0px 0px;
+}
+
+.nav-bar {
+    margin: -20px 0px 0px -20px;
+    color: black;
+}
+
+/* Sidebar Styles */
+.side-bar {
+    display: flex;
+    margin-left: 20px;
+    padding: 30px;
+    padding-top: 0px;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Banner Styles */
+.banner {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: -30px;
+    height: 100%;
+    width: 90%;
+    background-color: white;
+    padding: 30px;
+    padding-bottom: 20px;
+    border-radius: 70px;
+    background-color: rgba(255, 255, 255, 0.4); /* For background */
+}
+
+/* Welcome Text */
+.welcome-text {
+    color: white;
+    padding: 50px 0px 0px 50px;
+    font-size: 64px;
+    font-family: 'Calistoga', sans-serif;
+    font-weight: 100;
+}
+
+.p1 {
+    color: white;
+    padding: 20px 0px 0px 50px;
+    font-size: 40px;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+}
+
+.AddEmployee {
+    margin-top: 8px;
+    margin-bottom: 40vh;
+}
+
+/* Form Background Styles */
+.form-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: solid 1px antiquewhite;
+}
+
+/* Form Styles */
+form h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+form .team-name {
+    font-size: 18px;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+/* Form Group Styles */
+form .form-group {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-group1{
+    margin: 0px -6.5px 15px -6.5px;
+}
+
+.form-group2{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.form-group label, h3{
+    text-wrap: nowrap;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+}
+
+/* Input and Select Styles */
+form input,
+form select {
+    width: calc(100% - 10px);
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Register Button Styles */
+form button {
+    display: block;
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover Effect for Button */
+form button:hover {
+    background-color: #218838;
+}
+
+/* Additional Input/Select Custom Styles */
+input[type="text"]:disabled,
+select:disabled {
+    background-color: #f2f2f2;
+    cursor: not-allowed;
+}
+
+/* Busowner Info Styles */
+#bus-owner-info {
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#bus-owner-info p {
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Extended Bus Form (hidden by default) */
+#bus-info {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: solid 1px antiquewhite;
+}
+
+h4{
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+}
+
+/* Add Bus Button */
+#add-bus-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+#add-bus-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Table Styles */
+td {
+    font-size: 14px;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    font-weight: 600;
+    padding: 20px 53px 20px 0px;
+}
+
+.selected {
+    background-color: black;
+    color: white; /* Change text color to white for better visibility */
+    border-radius: 20px; /* Makes the background rounded */
+    padding: 10px 20px; /* Adds space around the text, making it 2x bigger */
+    text-align: center; /* Ensures text stays centered */
+    display: inline-block; /* Ensures padding does not affect adjacent cells */
+}
+
+/* Main Banner Styling */
+.banner {
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.4); /* White with 40% opacity */
+}
+
+/* Filter buttons styling */
+.filters {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+.filters button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.filters button.active,
+.filters button:hover {
+    background-color: #ffd900;
+    color: #fff;
+}
+
+/* General Styles for bus-table */
+  .busOwnerRevenuetable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .busOwnerRevenuetable th, .busOwnerRevenuetable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #d6d6d6; /* Bottom border only */
+  }
+  
+  /* Table Header */
+  .busOwnerRevenuetable th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  /* Table Row Styles */
+  .busOwnerRevenuetable tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Status Backgrounds */
+  .busOwnerRevenuetable td select {
+    width: 100%;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+
+/* Revenue Overview Section */
+.revenue-overview {
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filters button {
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: #555;
+}
+
+.background{
+    border-radius: 40px;
+    padding: 40px;
+    background-color: white;
+}

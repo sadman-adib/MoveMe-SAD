@@ -1,0 +1,315 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+        Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", 
+        "Microsoft Yahei UI", "Microsoft Yahei", "Source Han Sans CN", sans-serif;
+}
+
+/* General Styles */
+body {
+    background-color: #D9D9D9;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Layout Containers */
+.main_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    justify-items: center;
+    align-content: center;
+}
+
+/* Header Styles */
+.logo {
+    margin-top: -110px;
+    margin-left: 70px;
+    font-size: 34px;
+    color: black;
+    font-family: 'Inknut Antiqua', serif;
+}
+
+.back {
+    margin-left: -200px;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.left-header-menu {
+    display: flex;
+    align-items: center;
+}
+
+.home {
+    margin-left: -80px;
+    font-size: 25px;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    margin-top: 40px;
+}
+
+.right-header-menu {
+    margin: 5px 10px 0px 0px;
+}
+
+.nav-bar {
+    margin: -20px 0px 0px -20px;
+    color: black;
+}
+
+/* Sidebar Styles */
+.side-bar {
+    display: flex;
+    margin-left: 20px;
+    padding: 30px;
+    padding-top: 0px;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Banner Styles */
+.banner {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: -30px;
+  height: 100%; /* Adjust the height of the banner */
+  width: 90%;
+  background-color: white;
+  padding: 30px;
+  padding-bottom: 20px;
+  border-radius: 70px;
+  background-color: rgba(255, 255, 255, 0.4); /* For background */
+  overflow: hidden; /* To avoid overflowing the banner */
+}
+
+/* Scrollable content inside the banner */
+.banner .store-table {
+  max-height: 400px; /* Set a fixed max height for the table */
+  overflow-y: auto; /* Enable vertical scrolling */
+  width: 100%; /* Make sure the table takes full width */
+  border-collapse: collapse;
+}
+
+.store-table th, .store-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+
+/* Table Styles */
+td {
+    font-size: 14px;
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+    font-weight: 600;
+    padding: 20px 53px 20px 0px;
+}
+
+.selected {
+    background-color: black;
+    color: white; /* Change text color to white for better visibility */
+    border-radius: 20px; /* Makes the background rounded */
+    padding: 10px 20px; /* Adds space around the text, making it 2x bigger */
+    text-align: center; /* Ensures text stays centered */
+    display: inline-block; /* Ensures padding does not affect adjacent cells */
+}
+
+.filter-buttons {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.filter-buttons .btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.filter-buttons .btn:hover {
+  background-color: #555;
+}
+
+.driver-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.driver-table th, .driver-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.driver-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.driver-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button[type="button"] {
+  width: 100%;
+  background-color: #3e8e41;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="button"]:hover {
+  background-color: #45a049;
+}
+
+.close {
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Buttons for Edit and Delete actions */
+.driver-table .edit-btn {
+  background-color: blue;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.driver-table .delete-btn {
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for Edit and Delete buttons */
+.driver-table .edit-btn:hover,
+.driver-table .delete-btn:hover {
+  opacity: 0.8;
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Fallback */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.status.active {
+  background-color: #00b574; /* Green */
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  margin: 10px; /* Adds 5px margin around the status tag */
+  text-align: center;
+  font-family: Arial Rounded MT Bold, var(--default-font-family);
+  display: inline-block; /* Ensures the tag wraps only around the text */
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status.inactive {
+  background-color: #f44336; /* Red */
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  margin: 10px; /* Adds 5px margin around the status tag */
+  text-align: center;
+  font-family: Arial Rounded MT Bold, var(--default-font-family);
+  display: inline-block; /* Ensures the tag wraps only around the text */
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.status.ongoing {
+  background-color: #ffeb3b; /* Yellow */
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  margin: 10px; /* Adds 5px margin around the status tag */
+  text-align: center;
+  font-family: Arial Rounded MT Bold, var(--default-font-family);
+  display: inline-block; /* Ensures the tag wraps only around the text */
+  font-size: 14px;
+  font-weight: 600;
+}

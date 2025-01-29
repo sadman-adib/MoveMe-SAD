@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoveMe/Registration/Driver-Registration</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arial+Rounded+MT+Bold:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="Revenue-dashboard.css" />
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="main_container">
+        <!-- Header Section -->
+        <div class="header">
+            <span class="left-header-menu">
+                <label class="logo">MoveMe</label>
+                <a href="previous-page.html">
+                    <img class="back" src="assets/Back.png" alt="Back">
+                </a>          
+                <h1 class="home" style="cursor: pointer;">Revenue-dashboard</h1>
+            </span>
+
+            <table class="nav-bar">
+                <tr>
+                    <td onclick="selectOption(this, '/home/home.html')" style="cursor: pointer;">Home</td>
+                    <td onclick="selectOption(this, '/Bus-registration form/Bus-registration-form.html')" style="cursor: pointer;">Registration</td>
+                    <td onclick="selectOption(this, '/Bus-management-dashboard/Bus-management-dashboard.html')" style="cursor: pointer;">Management</td>
+                    <td onclick="selectOption(this, '')" style="cursor: pointer;">Real-Time Tracking</td>
+                    <td onclick="selectOption(this, '/Maintanence/Maintanence.html')" style="cursor: pointer;">Maintenance</td>
+                    <td onclick="selectOption(this, '/Revenue-dashboard/Revenue-dashboard.html')" style="cursor: pointer;">Revenue</td>
+                </tr>
+            </table>
+
+            <span class="right-header-menu">
+                <a href="search.html"><img src="assets/Search.png" alt="Search" style="cursor: pointer;"></a>
+                <a href="mail.html"><img src="assets/mail.png" alt="Mail" style="cursor: pointer;"></a>
+                <a href="notification.html"><img src="assets/notification.png" alt="Notification" style="cursor: pointer;"></a>
+                <a href="profile.html"><img src="assets/profile.png" alt="Profile" style="cursor: pointer;"></a>
+            </span>
+        </div>
+
+        <!-- Body Section -->
+        <div class="body">
+            <!-- Sidebar -->
+            <div class="side-bar">
+                <a href="/bus-revenue/bus-revenue.html">
+                    <img class="profile" src="assets/Bus Management.png" alt="Bus Management" style="cursor: pointer;">
+                </a>
+                <a href="/busowner-revenue/busowner-revenue.html">
+                    <img class="profile" src="assets\Bus-owner Management.png" alt="Store Management" style="cursor: pointer;">
+                </a>
+                <a href="/Passanger-revenue/Passanger-revenue.html">
+                    <img class="profile" src="assets/Passanger Management.png" alt="Bus-owner Management" style="cursor: pointer;">
+                </a>
+                <a href="/login/login.html">
+                    <img class="settings" src="assets/settings.png" alt="Settings" style="cursor: pointer;">
+                </a>
+            </div>
+
+            <!-- Main Banner -->
+            <!-- Main Banner -->
+            <div class="banner">
+                <div class="graph-container">
+                    <div class="graph" id="graph1">
+                        <div class="header">
+                            <h3>Revenue Bus Wise</h3>
+                            <div class="filters">
+                                <button class="active" data-interval="monthly">Monthly</button>
+                                <button data-interval="weekly">Weekly</button>
+                                <button data-interval="daily">Daily</button>
+                            </div>
+                        </div>
+                        <canvas id="chart1"></canvas>
+                    </div>
+            
+                    <div class="graph" id="graph2">
+                        <div class="header">
+                            <h3>Revenue Passenger Wise</h3>
+                            <div class="filters">
+                                <button class="active" data-interval="monthly">Monthly</button>
+                                <button data-interval="weekly">Weekly</button>
+                                <button data-interval="daily">Daily</button>
+                            </div>
+                        </div>
+                        <canvas id="chart2"></canvas>
+                    </div>
+            
+                    <div class="graph" id="graph3">
+                        <div class="header">
+                            <h3>Revenue Bus-Owner Wise</h3>
+                            <div class="filters">
+                                <button class="active" data-interval="monthly">Monthly</button>
+                                <button data-interval="weekly">Weekly</button>
+                                <button data-interval="daily">Daily</button>
+                            </div>
+                        </div>
+                        <canvas id="chart3"></canvas>
+                    </div>
+            
+                    <div class="graph" id="graph4">
+                        <div class="header">
+                            <h3>Company Revenue</h3>
+                            <div class="filters">
+                                <button class="active" data-interval="monthly">Monthly</button>
+                                <button data-interval="weekly">Weekly</button>
+                                <button data-interval="daily">Daily</button>
+                            </div>
+                        </div>
+                        <canvas id="chart4"></canvas>
+                    </div>
+                </div>
+            </div>            
+    <!-- Script Calls -->
+    <script src="Revenue-dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

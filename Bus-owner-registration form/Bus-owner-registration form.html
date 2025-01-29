@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MoveMe/Registration/Store-Registration</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arial+Rounded+MT+Bold:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="Bus-owner-registration form.css" />
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="main_container">
+        <!-- Header Section -->
+        <div class="header">
+            <span class="left-header-menu">
+                <label class="logo">MoveMe</label>
+                <a href="previous-page.html">
+                    <img class="back" src="assets/Back.png" alt="Back">
+                </a>          
+                <h1 class="home" style="cursor: pointer;">Bus Registration</h1>
+            </span>
+
+            <table class="nav-bar">
+                <tr>
+                    <td onclick="selectOption(this, '/Move-Me-Frontend-main/home/home.html')" style="cursor: pointer;">Home</td>
+                    <td onclick="selectOption(this, '/Move-Me-Frontend-main/Bus-registration form/Bus-registration-form.html')" style="cursor: pointer;">Registration</td>
+                    <td onclick="selectOption(this, 'management.html')" style="cursor: pointer;">Management</td>
+                    <td onclick="selectOption(this, 'tracking.html')" style="cursor: pointer;">Real-Time Tracking</td>
+                    <td onclick="selectOption(this, 'maintenance.html')" style="cursor: pointer;">Maintenance</td>
+                    <td onclick="selectOption(this, 'revenue.html')" style="cursor: pointer;">Revenue</td>
+                </tr>
+            </table>
+
+            <span class="right-header-menu">
+                <a href="search.html"><img src="assets/Search.png" alt="Search" style="cursor: pointer;"></a>
+                <a href="mail.html"><img src="assets/mail.png" alt="Mail" style="cursor: pointer;"></a>
+                <a href="notification.html"><img src="assets/notification.png" alt="Notification" style="cursor: pointer;"></a>
+                <a href="profile.html"><img src="assets/profile.png" alt="Profile" style="cursor: pointer;"></a>
+            </span>
+        </div>
+
+        <!-- Body Section -->
+        <div class="body">
+            <!-- Sidebar -->
+            <div class="side-bar">
+                <a href="/Move-Me-Frontend-main/Bus-registration form/Bus-registration-form.html">
+                    <img class="profile" src="assets/Bus Management.png" alt="Bus Management" style="cursor: pointer;">
+                </a>
+                <a href="/Move-Me-Frontend-main/Store-registration form/Store-registration-form.html">
+                    <img class="profile" src="assets/Store Management.png" alt="Store Management" style="cursor: pointer;">
+                </a>
+                <a href="/Move-Me-Frontend-main/Driver-registration form/Driver-registration form.html">
+                    <img class="profile" src="assets/Driver Management.png" alt="Driver Management" style="cursor: pointer;">
+                </a>
+                <a href="/Busowner-management-dashboard/Busowner-management-dashboard.html">
+                    <img class="AddEmployee" src="assets/Bus-owner Management.png" alt="Bus-owner Management" style="cursor: pointer;">
+                </a>
+                <a href="/login/login.html">
+                    <img class="settings" src="assets/settings.png" alt="Settings" style="cursor: pointer;">
+                </a>
+            </div>
+
+            <!-- Main Banner -->
+            <div class="banner">
+                <div class="image-bg">
+                    <div class="container">
+                        <div class="form-background">
+                            <form id="registration-form" method="POST" action="Bus-owner-registration form.php">
+                                <h3>Register Bus-owner</h3>
+                        
+                                <!-- Personal Details Section -->
+                                    <div class="form-group">
+                                        <input type="text" id="busowner_name" name="busowner_name" placeholder="Enter full name" required />
+                                        <input type="text" id="phone" name="phone" placeholder="Enter phone number" required />
+                                        <input type="email" id="email" name="email" placeholder="Enter email" />
+                                        <input type="text" id="location" name="location" placeholder="Enter location of the shop" required />
+                                        <input type="number" id="bus_quantity" name="bus_quantity" placeholder="Enter the number of buses" />
+                                    </div>
+                        
+                                 <!-- Payment Method -->
+                                 <div class="form-group2">
+                                    <select id="payment-method">
+                                      <option value="">Choose a payment method</option>
+                                      <option value="mobile">Mobile Banking</option>
+                                      <option value="bank">Bank Account</option>
+                                    </select>
+                                  </div>
+                                  
+                                  <!-- Extra Input (Hidden by Default) -->
+                                  <div class="form-group3" id="extra-input" style="display: none;">
+                                    <!-- Additional fields can be added here based on selected payment method -->
+                                  </div>
+                                 
+                                <button type="submit">Register</button>
+                            </form>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Calls -->
+    <script src="Bus-owner-registration form.js"></script>
+</body>
+</html>
